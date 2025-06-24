@@ -1,11 +1,11 @@
 "use client"
 
-import { useState } from "react"
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert, Image, ScrollView } from "react-native"
-import { router } from "expo-router"
-import { supabase } from "../../lib/supabase"
-import * as ImagePicker from "expo-image-picker"
 import { Ionicons } from "@expo/vector-icons"
+import * as ImagePicker from "expo-image-picker"
+import { router } from "expo-router"
+import { useState } from "react"
+import { Alert, Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native"
+import { supabase } from "../../lib/supabase"
 
 export default function CreatePostScreen() {
   const [content, setContent] = useState("")

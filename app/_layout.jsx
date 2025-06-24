@@ -1,7 +1,8 @@
 "use client"
 
-import { useEffect, useState } from "react"
 import { Stack } from "expo-router"
+import { useEffect, useState } from "react"
+import ScreenContainer from "../components/ScreenContainer"
 import { supabase } from "../lib/supabase"
 
 export default function RootLayout() {
@@ -24,9 +25,12 @@ export default function RootLayout() {
   }
 
   return (
+        <ScreenContainer>
+
     <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen name="(auth)" options={{ headerShown: false }} />
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
     </Stack>
+    </ScreenContainer>
   )
 }
